@@ -1,0 +1,10 @@
+type Query {
+    items:[Item]
+    itemById(id: ID!): Item
+}
+
+type Item {
+    id: ID!
+    type: String!
+    name: String!
+}
