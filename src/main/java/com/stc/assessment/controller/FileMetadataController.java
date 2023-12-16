@@ -13,12 +13,10 @@ import javax.ws.rs.core.MediaType;
 import java.util.Optional;
 
 @Controller
-@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)
 public class FileMetadataController {
     @Autowired
     private ItemRepository itemRepository;
-
+    // get all data
     @QueryMapping
     Iterable<Item> items() {
         return itemRepository.findAll();
